@@ -1,7 +1,15 @@
 [package]
 name = "cratemorelikebox"
+description = "cratemorelikebox is a package made for fun its not supposed to be useful"
 version = "1.0.0"
+authors = ["Puppet <doggyandkira2013@gmail.com>"]
+readme = "README.md"
 edition = "2021"
+repository = "https://github.com/Thepuppetqueen57/cratemorelikebox"
+license-file = "LICENSE"
+license = "GPL-3.0"
+keywords = ["dumb", "stupid", "useless"]
+categories = ["dumb", "stupid", "useless"]
 
 [dependencies]
 rand = "0.8.5"
