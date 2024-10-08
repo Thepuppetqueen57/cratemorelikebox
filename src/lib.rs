@@ -28,6 +28,11 @@ pub fn cruddler(num: i32) -> i32 {
     return numnum;
 }
 
+pub fn tobble(string1: &str, string2: &str) -> String {
+    let stringer = string1.to_string() + string2;
+    return stringer;
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -60,5 +65,11 @@ mod tests {
     fn boxtest5() {
         let LudicrousCrimesCapturedOnBankSecurityCamerasTheCulpritStillHasNotBeenCaught = cruddler(3);
         assert_eq!(LudicrousCrimesCapturedOnBankSecurityCamerasTheCulpritStillHasNotBeenCaught, -3);
+    }
+
+    #[test]
+    fn boxtest6() {
+        let delightfuldelighter = tobble("hi ", "boys");
+        assert_eq!(delightfuldelighter, "hi boys");
     }
 }
