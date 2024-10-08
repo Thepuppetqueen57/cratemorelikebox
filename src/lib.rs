@@ -37,6 +37,14 @@ pub fn crubble() -> String {
     return "linus torvalds".to_string();
 }
 
+pub fn brabble(tf: bool) -> bool {
+    if tf == false {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -81,5 +89,11 @@ mod tests {
     fn boxtest7() {
         let delectabledelecter = crubble();
         assert_eq!(delectabledelecter, "linus torvalds");
+    }
+
+    #[test]
+    fn boxtest8() {
+        let tastytaster = brabble(true);
+        assert_eq!(tastytaster, false);
     }
 }
