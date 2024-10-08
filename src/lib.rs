@@ -20,6 +20,14 @@ pub fn thegruddle(input: &str) -> String {
     chars.into_iter().collect()
 }
 
+pub fn cruddler(num: i32) -> i32 {
+    let mut numstr = num.to_string();
+    numstr.insert(0, '-');
+    let numnum: i32 = numstr.parse().unwrap();
+
+    return numnum;
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -46,5 +54,11 @@ mod tests {
     fn boxtest4() {
         let amazingamazer = thegruddle("hello");
         assert_ne!(amazingamazer, "hello");
+    }
+
+    #[test]
+    fn boxtest5() {
+        let LudicrousCrimesCapturedOnBankSecurityCamerasTheCulpritStillHasNotBeenCaught = cruddler(3);
+        assert_eq!(LudicrousCrimesCapturedOnBankSecurityCamerasTheCulpritStillHasNotBeenCaught, -3);
     }
 }
