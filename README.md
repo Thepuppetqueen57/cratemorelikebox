@@ -13,5 +13,5 @@
   - Added crubble function
   - Added brabble function
 
- # 1.0.0
+ ## 1.0.0
   - Initial version
