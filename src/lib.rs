@@ -33,6 +33,10 @@ pub fn tobble(string1: &str, string2: &str) -> String {
     return stringer;
 }
 
+pub fn crubble() -> String {
+    return "linus torvalds".to_string();
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -71,5 +75,11 @@ mod tests {
     fn boxtest6() {
         let delightfuldelighter = tobble("hi ", "boys");
         assert_eq!(delightfuldelighter, "hi boys");
+    }
+
+    #[test]
+    fn boxtest7() {
+        let delectabledelecter = crubble();
+        assert_eq!(delectabledelecter, "linus torvalds");
     }
 }
