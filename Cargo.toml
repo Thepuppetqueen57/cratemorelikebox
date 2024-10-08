@@ -7,7 +7,6 @@ readme = "README.md"
 edition = "2021"
 repository = "https://github.com/Thepuppetqueen57/cratemorelikebox"
 license-file = "LICENSE"
-license = "GPL-3.0"
 keywords = ["dumb", "stupid", "useless"]
 
 [dependencies]
