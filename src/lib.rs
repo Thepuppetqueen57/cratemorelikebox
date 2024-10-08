@@ -45,6 +45,10 @@ pub fn brabble(tf: bool) -> bool {
     }
 }
 
+pub fn warddle(name: &str) -> String {
+    return "you have angered the gods ".to_string() + name;
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -95,5 +99,11 @@ mod tests {
     fn boxtest8() {
         let tastytaster = brabble(true);
         assert_eq!(tastytaster, false);
+    }
+
+    #[test]
+    fn boxtest9() {
+        let crappycrapper = warddle("barth");
+        assert_eq!(crappycrapper, "you have angered the gods barth");
     }
 }
