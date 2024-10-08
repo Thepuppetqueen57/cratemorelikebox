@@ -46,8 +46,8 @@ mod tests {
 
     #[test]
     fn boxtest3() {
-        let awesomeawesoming = craddle();
-        assert_eq!(awesomeawesoming, "What if you put craddler but without the R 😃");
+        let awesomeawesomer = craddle();
+        assert_eq!(awesomeawesomer, "What if you put craddler but without the R 😃");
     }
 
     #[test]
