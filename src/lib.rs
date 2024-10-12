@@ -2,15 +2,15 @@ use rand::seq::SliceRandom;
 use rand::thread_rng;
 
 pub fn craddler() -> String {
-    return "This project is using the best lib ever fr fr".to_string();
+    "This project is using the best lib ever fr fr".to_string()
 }
 
 pub fn craddlerbutcooler(cooler: i32) -> i32 {
-    return cooler + 3;
+    cooler + 3
 }
 
 pub fn craddle() -> String {
-    return "What if you put craddler but without the R 😃".to_string();
+    "What if you put craddler but without the R 😃".to_string()
 }
 
 pub fn thegruddle(input: &str) -> String {
@@ -25,28 +25,24 @@ pub fn cruddler(num: i32) -> i32 {
     numstr.insert(0, '-');
     let numnum: i32 = numstr.parse().unwrap();
 
-    return numnum;
+    numnum
 }
 
 pub fn tobble(string1: &str, string2: &str) -> String {
-    let stringer = string1.to_string() + string2;
-    return stringer;
+    
+    string1.to_string() + string2
 }
 
 pub fn crubble() -> String {
-    return "linus torvalds".to_string();
+    "linus torvalds".to_string()
 }
 
 pub fn brabble(tf: bool) -> bool {
-    if tf == false {
-        return true;
-    } else {
-        return false;
-    }
+    !tf
 }
 
 pub fn warddle(name: &str) -> String {
-    return "you have angered the gods ".to_string() + name;
+    "you have angered the gods ".to_string() + name
 }
 
 #[cfg(test)]
