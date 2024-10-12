@@ -7,6 +7,9 @@
  This is for learning purposes also I'm bored lmao.
 
 # Changelog
+ ## 1.1.4
+  - Fixed a dumb thing in a dumb function
+
  ## 1.1.3
   - Added dabble function
 

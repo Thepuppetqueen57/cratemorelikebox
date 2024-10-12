@@ -10,7 +10,7 @@ pub fn craddlerbutcooler(cooler: i32) -> i32 {
 }
 
 pub fn craddle() -> String {
-    "What if you put craddler but without the R 😃".to_string()
+    "What if you put craddler but without the second R 😃".to_string()
 }
 
 pub fn thegruddle(input: &str) -> String {
