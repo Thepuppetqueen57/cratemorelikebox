@@ -7,6 +7,9 @@
  This is for learning purposes also I'm bored lmao.
 
 # Changelog
+ ## 1.1.3
+  - Added dabble function
+
  ## 1.1.2
   - Improved code
 

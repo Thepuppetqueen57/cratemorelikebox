@@ -45,6 +45,10 @@ pub fn warddle(name: &str) -> String {
     "you have angered the gods ".to_string() + name
 }
 
+pub fn dabble(numberone: i32, numbertwo: i32) -> i32 {
+    numberone / numbertwo
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -101,5 +105,11 @@ mod tests {
     fn boxtest9() {
         let crappycrapper = warddle("barth");
         assert_eq!(crappycrapper, "you have angered the gods barth");
+    }
+
+    #[test]
+    fn boxtest10() {
+        let deliciousdelighter = dabble(6, 2);
+        assert_eq!(deliciousdelighter, 3);
     }
 }
