@@ -7,6 +7,9 @@
  This is for learning purposes also I'm bored lmao.
 
 # Changelog
+ ## 1.1.2
+  - Improved code
+
  ## 1.1.1
   - Added warddle function
 
