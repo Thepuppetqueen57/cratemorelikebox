@@ -7,6 +7,10 @@
  This is for learning purposes also I'm bored lmao.
 
 # Changelog
+ ## 1.1.5
+  - Removed need for the rand package
+  - Formatted code to look better
+
  ## 1.1.4
   - Fixed a dumb thing in a dumb function
 
