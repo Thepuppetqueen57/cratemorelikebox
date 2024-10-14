@@ -9,5 +9,3 @@ repository = "https://github.com/Thepuppetqueen57/cratemorelikebox"
 license-file = "LICENSE"
 keywords = ["dumb", "stupid", "useless"]
 
-[dependencies]
-rand = "0.8.5"

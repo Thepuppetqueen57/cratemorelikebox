@@ -1,5 +1,41 @@
-use rand::seq::SliceRandom;
-use rand::thread_rng;
+use std::time::{self, Duration, Instant, SystemTime, UNIX_EPOCH};
+
+fn get_timestamp() -> u128 {
+    SystemTime::now()
+        .duration_since(UNIX_EPOCH)
+        .unwrap()
+        .as_millis()
+}
+
+struct BasicRng {
+    seed: u128,
+}
+
+impl BasicRng {
+    pub fn new() -> Self {
+        BasicRng {
+            seed: get_timestamp(),
+        }
+    }
+
+    pub fn next(&mut self) -> u128 {
+        self.seed ^= self.seed << 13;
+        self.seed ^= self.seed >> 17;
+        self.seed ^= self.seed << 5;
+        self.seed
+    }
+}
+
+pub fn shuffle(vec: &mut Vec<char>, rounds: u32) {
+    let mut rng = BasicRng::new();
+
+    for _ in 0..rounds {
+        let ri1 = rng.next() as usize % vec.len();
+        let ri2 = rng.next() as usize % vec.len();
+
+        vec.swap(ri1, ri2);
+    }
+}
 
 pub fn craddler() -> String {
     "This project is using the best lib ever fr fr".to_string()
@@ -15,9 +51,8 @@ pub fn craddle() -> String {
 
 pub fn thegruddle(input: &str) -> String {
     let mut chars: Vec<char> = input.chars().collect();
-    let mut rng = thread_rng();
-    chars.shuffle(&mut rng);
-    chars.into_iter().collect()
+    shuffle(&mut chars, 20);
+    chars.iter().collect()
 }
 
 pub fn cruddler(num: i32) -> i32 {
@@ -29,7 +64,6 @@ pub fn cruddler(num: i32) -> i32 {
 }
 
 pub fn tobble(string1: &str, string2: &str) -> String {
-    
     string1.to_string() + string2
 }
 
@@ -68,9 +102,11 @@ mod tests {
     #[test]
     fn boxtest3() {
         let awesomeawesomer = craddle();
-        assert_eq!(awesomeawesomer, "What if you put craddler but without the second R 😃");
+        assert_eq!(
+            awesomeawesomer,
+            "What if you put craddler but without the second R 😃"
+        );
     }
-
     #[test]
     fn boxtest4() {
         let amazingamazer = thegruddle("hello");
@@ -79,8 +115,12 @@ mod tests {
 
     #[test]
     fn boxtest5() {
-        let LudicrousCrimesCapturedOnBankSecurityCamerasTheCulpritStillHasNotBeenCaught = cruddler(3);
-        assert_eq!(LudicrousCrimesCapturedOnBankSecurityCamerasTheCulpritStillHasNotBeenCaught, -3);
+        let LudicrousCrimesCapturedOnBankSecurityCamerasTheCulpritStillHasNotBeenCaught =
+            cruddler(3);
+        assert_eq!(
+            LudicrousCrimesCapturedOnBankSecurityCamerasTheCulpritStillHasNotBeenCaught,
+            -3
+        );
     }
 
     #[test]
